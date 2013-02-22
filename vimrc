@@ -22,6 +22,8 @@ set sts=4		" softtabstop = 4
 set history=50          " keep 50 lines of command history
 set ruler               " Show the cursor position all the time
 
+set spr                 " Slit vertically, new window right
+
 set smarttab " Smart handling of the tab key
 set expandtab " Use spaces for tabs
 set shiftround " Round indent to multiple of shiftwidth
@@ -94,6 +96,8 @@ set stl+=%3*[%P] " Percentage through file
 
 set incsearch
 set ignorecase
+set tildeop
+set smartcase
 set pastetoggle=<F11>
 set spelllang=de
 map <F2> :w
@@ -105,8 +109,8 @@ nnoremap ; :
 vnoremap ; :
 " vnoremap : ;
 
-" nnoremap , ;
-" vnoremap , ;
+nnoremap , ;
+vnoremap , ;
 
 
 " set viminfo='20,\"500   " Keep a .viminfo file.
@@ -277,7 +281,8 @@ augroup END
 endif " has("autocmd")
 " }}}
 
-colo desert
+" colo desert
+colo zmrok
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
